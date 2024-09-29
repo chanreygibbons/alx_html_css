@@ -1,4 +1,4 @@
-/* General reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,23 +8,24 @@
 /* Body styling */
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #1b1b1b;
+    background-color: #f4f4f4;
     color: #fff;
     line-height: 1.6;
 }
 
 /* Header styling */
 header {
-    width: 234px;
-    height: 15px;
-    position: absolute;
-    top: 37px;
-    left: 1041px;
-    gap: 0px;
-    opacity: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
-/* Logo styling */
 .logo {
     display: flex;
     align-items: center;
@@ -32,16 +33,6 @@ header {
     font-size: 24px;
     font-weight: 700;
     color: #fff;
-    margin-left: 50px;
-    margin-top: 20px;
-}
-
-/* Navigation styling */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
 }
 
 nav ul {
@@ -50,46 +41,21 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 15.08px;
-    text-align: left;
-}
-
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-}
-
-nav ul li:last-child a {
-    width: 34px;
-    height: 15px;
-    left: 200px;
-    gap: 0px;
-    opacity: 0; /* LOGIN link opacity set to 0 */
-}
-
-/* Button styling for Register */
-button {
-    padding: 10px 20px;
-    background-color: #ff4bcf;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
     font-weight: 700;
-    border: none;
-    cursor: pointer;
-    border-radius: 25px;
+    color: #fff;
+    padding: 5px 10px;
 }
 
-button:hover {
-    background-color: #e33eb1; /* Slight darkening for hover effect */
+nav ul li a:hover {
+    color: #ff4bcf;
 }
 
-/* Hero section styling */
+/* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-image.jpg') center/cover no-repeat;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -97,54 +63,64 @@ button:hover {
     align-items: center;
     text-align: center;
     color: #fff;
+    margin-top: 100px;
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .hero button {
     background-color: #ff4bcf;
+    padding: 15px 30px;
     font-size: 16px;
     font-weight: 700;
-    padding: 15px 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
-/* Pros section styling */
+.hero button:hover {
+    background-color: #e33eb1;
+}
+
+/* Pros Section */
 .pros {
-    background-color: #1b1b1b;
-    padding: 50px 0;
+    background-color: #0f0f0f;
+    padding: 60px 0;
     text-align: center;
 }
 
 .pros h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
     margin-bottom: 30px;
+    color: #ff4bcf;
 }
 
 .pros .profile {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pros .profile .person {
     text-align: center;
+    margin: 20px;
 }
 
 .pros .profile img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 15px;
 }
 
@@ -159,12 +135,186 @@ button:hover {
     color: #bdbdbd;
 }
 
-/* Footer styling */
+/* Testimonials Section */
+.testimonials {
+    background-color: #ff4bcf;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.testimonials p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.testimonials h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Popular Tutorials Section */
+.tutorials {
+    background-color: #fff;
+    padding: 60px 0;
+    color: #333;
+    text-align: center;
+}
+
+.tutorials h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ff4bcf;
+}
+
+.tutorials .tutorials-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.tutorials .tutorial {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+}
+
+.tutorial img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tutorial h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tutorial p {
+    font-size: 14px;
+    color: #666;
+}
+
+.tutorial .rating {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #ff4bcf;
+}
+
+/* Membership Section */
+.membership {
+    background-color: #0f0f0f;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.membership h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ff4bcf;
+}
+
+.membership .membership-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.membership .plan {
+    text-align: center;
+    width: 220px;
+}
+
+.membership .plan h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.membership .plan p {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+.membership button {
+    background-color: #ff4bcf;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.membership button:hover {
+    background-color: #e33eb1;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #fff;
+    padding: 60px 0;
+    color: #333;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ff4bcf;
+}
+
+.faq .faq-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+}
+
+.faq .faq-item {
+    width: 300px;
+}
+
+.faq .faq-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faq .faq-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer Section */
 footer {
     background-color: #111;
     color: #fff;
     text-align: center;
     padding: 30px 0;
+}
+
+footer .social-icons {
+    margin-bottom: 20px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
 }
 
 footer p {
